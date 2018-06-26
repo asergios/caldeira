@@ -30,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Turn the boiler ON command
     protected void turnCaldeiraOn(){
         caldeira.setImageAlpha(255);
     }
 
+    // Turn the boiler OFF command
     protected void turnCaldeiraOff(){
         caldeira.setImageAlpha(100);
     }
