@@ -8,8 +8,8 @@ import android.widget.CompoundButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected ToggleButton toggle;  // ON/OFF Boiler ToggleButton Object
-    protected ImageView caldeira;  // Boiler Image Object
+    protected ToggleButton toggle;                                      // ON/OFF Boiler ToggleButton Object
+    protected ImageView caldeira;                                       // Boiler Image Object
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +33,13 @@ public class MainActivity extends AppCompatActivity {
     // Turn the boiler ON command
     protected void turnCaldeiraOn(){
         caldeira.setImageAlpha(255);
+        CaldeiraRestClient.postCaldeiraState(true);
     }
 
     // Turn the boiler OFF command
     protected void turnCaldeiraOff(){
         caldeira.setImageAlpha(100);
+        CaldeiraRestClient.postCaldeiraState(false);
     }
 
 }
